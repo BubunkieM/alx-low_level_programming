@@ -1,2 +1,2 @@
 #1/bib/bash
-gcc 
+gcc $CFILE -E -o c 
