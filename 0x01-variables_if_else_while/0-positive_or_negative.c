@@ -3,20 +3,19 @@
 #include <stdio.h>
 
 /**
- * main -printing positive or negative variables
+ * main - printing variables of positive or negative
  *
- * Return: (0)
+ * Return: always (0)
  */
 int main(void)
 {
 	int n;
 
 	srand(time(0));
-	n = rand() -RAND_MAX / 2;
+	n = rand() - RAND_MAX / 2;
 	if (n > 0)
 	{
 		printf("%d is positive\n", n);
-	
 	}
 	else if (n == 0)
 	{
@@ -28,3 +27,4 @@ int main(void)
 	}
 	return (0);
 }
+
