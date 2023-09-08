@@ -1,20 +1,18 @@
 #include <stdio.h>
+
 /**
- * main -single digit numberz on base10 starting from 0
+ * main - printing numbers from 0 to 9
  *
  * Return: always (0)
- *
  */
 int main(void)
 {
-	int c;
+	int b;
 
-	c = 0;
-	while
-		(c < 10) {
-			putchar(c + '0');
-			c++;
-		}
+	for (b = 48; b < 58; b++)
+	{
+		putchar(b);
+	}
 	putchar('\n');
 	return (0);
 }
