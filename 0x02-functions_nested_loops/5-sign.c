@@ -4,11 +4,11 @@
  *
  * @n: int to be checked
  *
- * Return: (1)
+ * Return: 1 and prints + if n is greater than zero
  *
- * otherwise (0)
+ * 0 and prints 0 if n is zero
  *
- * (-1) if n is less than zero
+ * -1 and prints - if n is less than zero
  */
 int print_sign(int n)
 {
