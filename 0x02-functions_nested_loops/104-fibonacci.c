@@ -1,13 +1,13 @@
 #include <stdio.h>
 /**
  * main - main block
- * Description: printing the multiple sum of 3 or
+ * Description: printing the sum of all multiples of 3 or
  * 5 below 1024 (excluded), followed by a new line
- * Return: always (0)
+ * Return: (0)
  */
 int main(void)
 {
-	int i  = 0;
+	int i = 0;
 	unsigned long int a = 0, b = 1, next = 0;
 
 	while (i < 98)
