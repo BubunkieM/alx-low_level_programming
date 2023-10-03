@@ -52,6 +52,8 @@ int _atoi(char *s)
  * @argv: array of arguments
  *
  * Return: 0, on error 1
+ *
+ * Return: 0, on error 1
  */
 int main(int argc, char *argv[])
 {
@@ -70,4 +72,4 @@ int main(int argc, char *argv[])
 	printf("%d\n", result);
 
 	return (0);
-
+}
