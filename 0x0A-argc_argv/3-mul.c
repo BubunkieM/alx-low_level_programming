@@ -2,10 +2,10 @@
 #include "main.h"
 
 /**
- * _atoi - converts a string into an integer
+ * _atoi - converts a string into a integer
  * @s: string to be converted
  *
- * Return: int converted froma string
+ * Return: int to be converted from a string
  */
 int _atoi(char *s)
 {
@@ -18,7 +18,7 @@ int _atoi(char *s)
 	f = 0;
 	digit = 0;
 
-	while (s[len] != '0')
+	while (s[len] != '\0')
 		len++;
 
 	while (i < len && f == 0)
@@ -48,12 +48,10 @@ int _atoi(char *s)
 
 /**
  * main - multiplies two numbers
- * @argc: number of argument
+ * @argc: number of arguments
  * @argv: array of arguments
  *
- * Return: 0, on error 1
- *
- * Return: 0, on error 1
+ * Return 0, on error 1
  */
 int main(int argc, char *argv[])
 {
@@ -67,7 +65,7 @@ int main(int argc, char *argv[])
 
 	num1 = _atoi(argv[1]);
 	num2 = _atoi(argv[2]);
-	result = num1 * num2;
+	resulr = num1 * num2;
 
 	printf("%d\n", result);
 
