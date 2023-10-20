@@ -4,10 +4,10 @@
 
 /**
  * add_node - adds a new node at the beginning of a list
- * @head: original linked list
- * @str: string to add to node
+ * @head: the original linked list
+ * @str: the string to add to the new node
  *
- * Return: address of the new list or NULL if invalid
+ * Return: the address of the new list or NULL if it failed
  */
 list_t *add_node(list_t **head, const char *str)
 {
@@ -23,7 +23,7 @@ list_t *add_node(list_t **head, const char *str)
 
 	temp->len = length;
 	temp->str = strdup(str);
-	temp->next = head;
+	temp->next = *head;
 	*head = temp;
 	return (temp);
 }
