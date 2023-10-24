@@ -25,7 +25,7 @@ void free_listp(listp_t **head)
 
 /**
  * print_listint_safe - prints a linked list
- * @head: pointer to the list
+ * @head: head of a list
  *
  * Return: number of nodes in the list
  */
