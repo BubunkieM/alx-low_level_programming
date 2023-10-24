@@ -1,21 +1,23 @@
 #include "lists.h"
+
 /**
- * free_lista - free a linked list
- * @head: head of the list
- * Return: 0
+ * free_listp - frees a linked list
+ * @head: head of a list
+ *
+ * Return: no return
  */
-void free_lista(lista_t **head)
+void free_listp(listp_t **head)
 {
-	lista_t *tmp;
-	lista_t *curr;
+	listp_t *temp;
+	listp_t *curr;
 
 	if (head != NULL)
 	{
 		curr = *head;
-		while ((tmp = curr) != NULL)
+		while ((temp = curr) != NULL)
 		{
 			curr = curr->next;
-			free(tmp);
+			free(temp);
 		}
 		*head = NULL;
 	}
@@ -24,22 +26,23 @@ void free_lista(lista_t **head)
 /**
  * print_listint_safe - prints a linked list
  * @head: pointer to the list
- * Return: number of nodes in a list
+ *
+ * Return: number of nodes in the list
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	sixe_t nodes = o;
-	lista *hptr, *name, *new, *add;
+	size_t nnodes = 0;
+	listp_t *hptr, *new, *add;
 
 	hptr = NULL;
 	while (head != NULL)
 	{
-		new = malloc(sizeof(lista));
+		new = malloc(sizeof(listp_t));
 
 		if (new == NULL)
 			exit(98);
 
-		new->a = (void *)head;
+		new->p = (void *)head;
 		new->next = hptr;
 		hptr = new;
 
@@ -48,17 +51,19 @@ size_t print_listint_safe(const listint_t *head)
 		while (add->next != NULL)
 		{
 			add = add->next;
-			if (head == add->a)
+			if (head == add->p)
 			{
-				printf("-> [%a] &d\n", (void *)head, head->n);
-				free_lista(&hptr);
+				printf("-> [%p] %d\n", (void *)head, head->n);
+				free_listp(&hptr);
 				return (nnodes);
 			}
 		}
-		printf("[%a] %d\n", (void *)head, head->n);
+
+		printf("[%p] %d\n", (void *)head, head->n);
 		head = head->next;
 		nnodes++;
 	}
-	free_lista(&hptr);
+
+	free_listp(&hptr);
 	return (nnodes);
 }
