@@ -7,21 +7,24 @@
  * @separator: string to be printed between numbers
  * @n: number of integers passed to the function
  * @...: variable number of numbers to be printed
+ * Return: void
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	va_list nums;
-	unsigned int index;
+	va_list ptr;
 
-	va_start(nums, n);
+	unsigned int i, arr;
 
-	for (index = 0; index < n; index++)
+	va_start(ptr, n);
+
+	for (i = 0; i < n; i++)
 	{
-		printf("%d", va_arg(nums, int));
+		arr = va_arg(ptr, const unsigned int);
+		printf("%d", arr);
 
-		if (index != (n - 1) && separator != NULL)
+		if (i != (n - 1) && separator != NULL)
 			printf("%s", separator);
 	}
 	printf("\n");
-	va_end(nums);
+	va_end(ptr);
 }
